@@ -9,3 +9,16 @@ before_install:
 
 script:
   - docker run -e CI=true lalo/docker-react yarn test --coverage
+
+#deploy:
+#  edge: true
+#  provider: elasticbeanstalk
+#  region: "us-west-2"
+#  app: "docker-react"
+#  env: "Docker-env"
+#  bucket_name: ""# take it from the s3 config.
+#  bucket_path: "" # take it from the s3 config.
+#  on:
+#     branch: master
+#  access_key_id: $AWS_ACCESS_KEY
+#  secret_access_key: $AWS_SECRET_KEY
